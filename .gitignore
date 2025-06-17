@@ -1,0 +1,15 @@
+# Ignore compiled Java classes
+url-shortner-sb/target/
+
+# VS Code settings
+.vscode/
+
+# IntelliJ/IDEA
+.idea/
+
+# Node.js dependencies
+url-shortner-react/node_modules/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
