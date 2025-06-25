@@ -1,8 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss/preflight" 
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-@tailwind base;
-@tailwind components;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind utilities;
+/* Custom theme configuration for v4.1 */
+@theme {
+  /* Custom colors */
+  --color-navbarColor: #ffffff;
+  --color-btnColor: #3364f7;
+  --color-linkColor: #2a5bd7;
+
+  /* Custom fonts */
+  --font-family-roboto: Roboto, sans-serif;
+  --font-family-montserrat: Montserrat, sans-serif;
+
+  /* Custom shadows */
+  --shadow-custom: 0 0 15px rgba(0, 0, 0, 0.3);
+  --shadow-right: 10px 0px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+
+.bg-custom-gradient {
+  background: linear-gradient(to right, #3b82f6, #9333ea);
+}
+
+.bg-custom-gradient-2 {
+  background: linear-gradient(to left, #3b82f6, #f43f5e);
+}
+
+.bg-card-gradient {
+  background: linear-gradient(to right, #3b82ac, #4299e1);
+}
+
+/* Force generation of specific classes */
+@source inline("text-btnColor border-btnColor bg-custom-gradient bg-custom-gradient-2 bg-card-gradient");
